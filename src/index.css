@@ -1,3 +1,6 @@
 #carousel{
     max-height: 500px;
 }
+#carouselExampleControls{
+    object-fit: contain !important;
+}

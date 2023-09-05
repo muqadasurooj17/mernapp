@@ -3,7 +3,7 @@ import React from "react";
 export default function Carouesal() {
   return (
  <>
-      <div id="carouselExampleControls" className="carousel slide carousel-fade" style={{objectFit:"contain !important"}}  data-bs-ride="carousel" >
+      <div id="carouselExampleControls" className="carousel slide carousel-fade"   data-bs-ride="carousel" >
         <div className="carousel-inner" id='carousel'>
           <div className="carousel-caption" style={{zIndex:"10"}}>
     <form className="d-flex">
@@ -13,21 +13,21 @@ export default function Carouesal() {
           </div>
           <div className="carousel-item active">
             <img
-              src="https://source.unsplash.com/random/600x900/?pizza"
+              src="https://source.unsplash.com/random/300×300?pizza"
               className="d-block w-100 " style={{filter: "brightness(50%)"}}
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
-              src="https://source.unsplash.com/random/600x900?burger"
+              src="https://source.unsplash.com/random/300×300?burger"
               className="d-block w-100" style={{filter: "brightness(50%)"}}
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
-              src="https://source.unsplash.com/random/600x900/?barbeque"
+              src="https://source.unsplash.com/random/300×300?barbeque"
               className="d-block w-100" style={{filter: "brightness(50%)"}}
               alt="..."
             />
