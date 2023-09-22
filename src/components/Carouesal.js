@@ -56,3 +56,6 @@ export default function Carouesal() {
     </>
   );
 }
+//mongoimport --uri mongodb+srv://muqadasurooj:GuoXnfqCH1CyPDZU@gofoodmern.f0qegyz.mongodb.net/MernApp --collection GoFoodData --jsonArray --file "D:\projects\goFood\mernapp\foodData.json"
+//'mongoimport' is not recognized as an internal or external command,
+//operable program or batch file.
