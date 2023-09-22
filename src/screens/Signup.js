@@ -39,7 +39,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log( JSON.stringify({name: credentials.name, email: credentials.email, password: credentials.password, location: credentials.geolocation }))
-    const response = await fetch("http://localhost:5000/api/auth/createuser", {
+    const response = await fetch("http://localhost:5000/api/createuser", {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',
@@ -76,24 +76,35 @@ export default function Signup() {
       </div>*/}
 
         <div className='container' >
-          <form className='w-50 m-auto mt-5 border bg-dark border-success rounded' onSubmit={handleSubmit}>
+          <form className='w-50 m-auto mt-5 border bg-dark border-success rounded' 
+          onSubmit={handleSubmit}>
             <div className="m-3">
               <label htmlFor="name" className="form-label">Name</label>
               <input type="text" className="form-control" name='name' 
               value={credentials.name} onChange={onChange} aria-describedby="emailHelp" />
             </div>
             <div className="m-3">
-              <label htmlFor="email" className="form-label">Email address</label>
+              <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
               <input type="email" className="form-control" name='email' 
-              value={credentials.email} onChange={onChange} aria-describedby="emailHelp" />
+              value={credentials.email} 
+              onChange={onChange} aria-describedby="emailHelp" />
+              <div id="emailHelp" className='form-text'>We will nwevwe</div>
             </div>
+
             <div className="m-3">
+              <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+              <input type="password" className="form-control" name='password' 
+              value={credentials.password} 
+              onChange={onChange} aria-describedby="emailHelp" />
+            </div>
+
+            {/* <div className="m-3">
               <label htmlFor="address" className="form-label">Address</label>
               <fieldset>
                 <input type="text" className="form-control" name='address' placeholder='"Click below for fetching address"' value={address} 
                 onChange={(e)=>setAddress(e.target.value)} aria-describedby="emailHelp" />
               </fieldset>
-            </div>
+            </div> */}
             {/* <div className="m-3">
               <button type="button" 
               onClick={handleClick} name="geolocation" className=" btn btn-success">Click for current Location </button>
