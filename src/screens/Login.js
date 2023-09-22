@@ -1,8 +1,9 @@
 import React, {useState}from 'react'
-import {  Link } from 'react-router-dom'
+import { useNavigate,  Link } from 'react-router-dom'
 export default function Login() {
 
   const [credentials, setCredentials] = useState({ email: "", password: "" })
+  let navigate=useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log( JSON.stringify({email: credentials.email, password: credentials.password }))
@@ -21,15 +22,11 @@ export default function Login() {
 
 
     if (!json.success) {
-      alert("Enter Valid Credentials")
-      //save the auth toke to local storage and redirect
-      //localStorage.setItem('token', json.authToken)
-      //navigate("/login")
-
+      alert("Enter Valid Credentials")}
+    if (json.success) {
+      navigate("/");
+  
     }
-    // else {
-    //   alert("Enter Valid Credentials")
-    // }
   }
 
   const onChange = (e) => {

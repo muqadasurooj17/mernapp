@@ -28,4 +28,19 @@ return res.status(400).json({errors:errors.array()})
         res.json({success:false});
     }
 })
+
+
+router.post("/loginuser",async(req,res)=>{
+    let email=req.body.email;
+    try{
+        let userDta=await User.findOne({email});
+        if(!userDta){
+            return res.status(400).json({errors:"try logging with  coreect email"})       }
+            return res.json({success:true})
+    }
+    catch(error){
+        console.log(error)
+        res.json({success:false})
+    }
+})
 module.exports=router;
