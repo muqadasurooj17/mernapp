@@ -7,3 +7,6 @@ added second data
 npm init
 npm install express
 npm install express nodemon mongoose
+thunder clinet is like postman
+to run the app backend: nodemon .\index.js
+use nodemon so that you dont have need to run commands again and again
