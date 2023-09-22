@@ -15,3 +15,6 @@ schema is used to validate things and data
 how to console.log our data by mongosse using schema way
 add database name befor question mark in connection query
 keep find blank when you are trying to fetch complete data
+creating apis and urls with help of express
+showing some response when user is cretaed
+installing express validator
