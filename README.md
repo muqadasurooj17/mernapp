@@ -12,3 +12,6 @@ to run the app backend: nodemon .\index.js
 use nodemon so that you dont have need to run commands again and again
 monggooose is used to create schemaa for mongodb atlas as its schemas less. 
 schema is used to validate things and data 
+how to console.log our data by mongosse using schema way
+add database name befor question mark in connection query
+keep find blank when you are trying to fetch complete data
