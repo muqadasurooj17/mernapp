@@ -30,12 +30,21 @@ return res.status(400).json({errors:errors.array()})
 })
 
 
-router.post("/loginuser",async(req,res)=>{
+router.post("/loginuser",[
+    body('email').isEmail(),
+    body('password','Incorrect Password').isLength({min:5})]
+
+,async(req,res)=>{
+    const errors=validationResult(req);
+if(!errors.isEmpty()){
+return res.status(400).json({errors:errors.array()})
+}
     let email=req.body.email;
     try{
         let userDta=await User.findOne({email});
         if(!userDta){
-            return res.status(400).json({errors:"try logging with  coreect email"})       }
+            return res.status(400).json({errors:"try logging with  coreect email"})     
+          }
             return res.json({success:true})
     }
     catch(error){
