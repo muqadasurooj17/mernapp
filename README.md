@@ -10,3 +10,5 @@ npm install express nodemon mongoose
 thunder clinet is like postman
 to run the app backend: nodemon .\index.js
 use nodemon so that you dont have need to run commands again and again
+monggooose is used to create schemaa for mongodb atlas as its schemas less. 
+schema is used to validate things and data 
