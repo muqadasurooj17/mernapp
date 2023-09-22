@@ -18,3 +18,4 @@ keep find blank when you are trying to fetch complete data
 creating apis and urls with help of express
 showing some response when user is cretaed
 installing express validator
+app.use is a middle ware and we have to use express .json in it
