@@ -1,5 +1,5 @@
 import React, {useState}from 'react'
-
+import {  Link } from 'react-router-dom'
 export default function Login() {
 
   const [credentials, setCredentials] = useState({ email: "", password: "" })
@@ -37,6 +37,31 @@ export default function Login() {
   }
 
   return (
-    <div>this is login page </div>
+    <>
+
+
+<div className='container' >
+          <form className='w-50 m-auto mt-5 border bg-dark border-success rounded' 
+          onSubmit={handleSubmit}>
+            <div className="m-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+              <input type="email" className="form-control" name='email' 
+              value={credentials.email} 
+              onChange={onChange} aria-describedby="emailHelp" />
+              <div id="emailHelp" className='form-text'>We will nwevwe</div>
+            </div>
+
+            <div className="m-3">
+              <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+              <input type="password" className="form-control" name='password' 
+              value={credentials.password} 
+              onChange={onChange} aria-describedby="emailHelp" />
+            </div>
+            <button type="submit" className="m-3 btn btn-success">Submit</button>
+            <Link to="/createuser" className="m-3 mx-1 btn btn-danger">I am a New user</Link>
+          </form>
+        </div>
+    </>
+
   )
 }

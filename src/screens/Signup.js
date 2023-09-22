@@ -76,14 +76,14 @@ export default function Signup() {
       </div>*/}
 
         <div className='container' >
-          <form className='w-50 m-auto mt-5 border bg-dark border-success rounded' 
+          <form className='w-50 m-auto mt-5  text-white color-white border bg-dark border-success rounded' 
           onSubmit={handleSubmit}>
-            <div className="m-3">
+            <div className="mb-3">
               <label htmlFor="name" className="form-label">Name</label>
               <input type="text" className="form-control" name='name' 
               value={credentials.name} onChange={onChange} aria-describedby="emailHelp" />
             </div>
-            <div className="m-3">
+            <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
               <input type="email" className="form-control" name='email' 
               value={credentials.email} 
@@ -91,10 +91,18 @@ export default function Signup() {
               <div id="emailHelp" className='form-text'>We will nwevwe</div>
             </div>
 
-            <div className="m-3">
+            <div className="mb-3">
               <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
               <input type="password" className="form-control" name='password' 
               value={credentials.password} 
+              onChange={onChange} aria-describedby="emailHelp" />
+            </div>
+            <div className="mb-3">
+              <label for="exampleInputAddress1" 
+              className="form-label">Adress</label>
+
+              <input type="text" className="form-control" name='password' 
+              value={credentials.address} 
               onChange={onChange} aria-describedby="emailHelp" />
             </div>
 
