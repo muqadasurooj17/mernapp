@@ -14,13 +14,13 @@ const mongoURI = 'mongodb+srv://muqadasurooj:gOtkpUexqWb6xdoY@gofoodmern.f0qegyz
                 const fetched_data=await mongoose.connection.db.collection("FoodItems");
                 fetched_data.find({}).toArray( async function(err,data){
 
-                    const foodCategory=await mongoose.connection.db.collection("FoodCategory"); 
-foodCategory.find({}).toArray(function(err,catData){
+                    const FoodCategory=await mongoose.connection.db.collection("FoodCategory"); 
+FoodCategory.find({}).toArray(function(err,catData){
     if(err) console.log(err);
 
     else {
           global.FoodItems=data;
-        global.foodCategory=catData;}
+        global.FoodCategory=catData;}
 })
                     //calling both in one chnace
 
