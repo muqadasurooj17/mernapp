@@ -1,6 +1,13 @@
 // 
 const express = require('express');
 //const mongoose = require('mongoose');
+// global.foodData = require('./db')(function call(err, data, CatData) {
+//   // console.log(data)
+//   if(err) console.log(err);
+//   global.foodData = data;
+//   global.foodCategory = CatData;
+// })
+
 const cors = require('cors'); // Import the cors middleware
 const app = express()
 const port = 5000;
@@ -34,6 +41,3 @@ app.get('/',(req,res)=>{
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-
-
-
