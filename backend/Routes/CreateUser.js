@@ -4,6 +4,8 @@ const User= require('../models/User')
 const {body,validationResult}=require('express-validator');
 
 const bcrypt=require("bcryptjs");
+const jwt=require("jsonwebtoken");
+const jwtSecret="iammuqadas$#"
 router.post("/createuser",
 
 [body('email').isEmail(),
@@ -51,8 +53,17 @@ return res.status(400).json({errors:errors.array()})
         if(!userDta){
             return res.status(400).json({errors:"try logging with  coreect email"})     
           }
-            return res.json({success:true})
+          const pwdCompare=await bcrypt.compare(req.body.password,userData.password)
+          if(!pwdCompare){
+            return res.status(400).json({errors:"try logging with  coreect email"})     
+          }
+          const data={
+            user:{
+                id:userData.id
+            }
+        }
     }
+    
     catch(error){
         console.log(error)
         res.json({success:false})
