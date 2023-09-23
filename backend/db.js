@@ -11,10 +11,13 @@ const mongoURI = 'mongodb+srv://muqadasurooj:gOtkpUexqWb6xdoY@gofoodmern.f0qegyz
             else {
                 // var database =
                 console.log("connected to mongo")
-                const fetched_data=await mongoose.connection.db.collection("FoodCategory");
+                const fetched_data=await mongoose.connection.db.collection("FoodItem");
                 fetched_data.find({}).toArray(function(err,data){
                     if(err) console.log(err);
-                    else console.log(data)
+                    else 
+                    global.FoodItem=data;
+                console.log(global.FoodItem);
+
                 });
             }
                 // const foodCollection = await mongoose.connection.db.collection("food_items");
