@@ -97,14 +97,29 @@ export default function Signup() {
               value={credentials.password} 
               onChange={onChange} aria-describedby="emailHelp" />
             </div>
-            <div className="mb-3">
+
+            <div className="m-3">
+              <label htmlFor="address" className="form-label">Address</label>
+              <input type="text" className="form-control" name='address' 
+                placeholder='"Click below for fetching address"' 
+                //value={address} 
+                 //onChange={(e)=>setAddress(e.target.value)} 
+                aria-describedby="emailHelp" />
+              {/* <fieldset>
+                <input type="text" className="form-control" name='address' 
+                placeholder='"Click below for fetching address"' value={address} 
+                // onChange={(e)=>setAddress(e.target.value)} 
+                aria-describedby="emailHelp" />
+              </fieldset> */}
+            </div>
+            {/* <div className="mb-3">
               <label for="exampleInputAddress1" 
               className="form-label">Adress</label>
 
-              <input type="text" className="form-control" name='password' 
+              <input type="text" className="form-control" name='' 
               value={credentials.address} 
               onChange={onChange} aria-describedby="emailHelp" />
-            </div>
+            </div> */}
 
             {/* <div className="m-3">
               <label htmlFor="address" className="form-label">Address</label>
