@@ -28,7 +28,8 @@ router.post('/createuser', [
     try {
         await User.create({
             name: req.body.name,
-            // password: req.body.password,  first write this and then use bcryptjs
+            // password: req.body.password, 
+            // first write this and then use bcryptjs
             password: securePass,
             email: req.body.email,
             location: req.body.location
